@@ -1,7 +1,7 @@
 package ru.netology.stats.StatsService;
 
 public class StatsService {
-    public long amountOfSales(long [] sales) {
+    public long amountOfSales(long[] sales) {
         long total = 0;
 
         for (long sale : sales) {
@@ -10,7 +10,7 @@ public class StatsService {
         return total;
     }
 
-    public long averageSalesAmount(long [] sales) {
+    public long averageSalesAmount(long[] sales) {
         long average;
         long averageSum = amountOfSales(sales);
         int numberOfMonths = sales.length;
@@ -20,46 +20,46 @@ public class StatsService {
         return Math.round(average * 100) / 100;
     }
 
-    public int maxSales(long [] sales) {
+    public int maxSales(long[] sales) {
         int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= sales[maxMonth]){
+            if (sales[i] >= sales[maxMonth]) {
                 maxMonth = i;
             }
         }
         return maxMonth + 1;
     }
 
-    public int minSales(long [] sales) {
+    public int minSales(long[] sales) {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= sales[minMonth]){
+            if (sales[i] <= sales[minMonth]) {
                 minMonth = i;
             }
         }
         return minMonth + 1;
     }
 
-    public int monthsLessAverage(long [] sales) {
+    public int monthsLessAverage(long[] sales) {
         int monthsLessAverage = 0;
-        long average= averageSalesAmount(sales);
+        long average = averageSalesAmount(sales);
 
-        for(int i = 0; i < sales.length; i++){
-            if (sales[i] < average){
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < average) {
                 monthsLessAverage += 1;
             }
         }
         return monthsLessAverage;
     }
 
-    public int monthsAboveAverage(long [] sales) {
+    public int monthsAboveAverage(long[] sales) {
         int monthsAboveAverage = 0;
-        long average= averageSalesAmount(sales);
+        long average = averageSalesAmount(sales);
 
-        for(int i = 0; i < sales.length; i++){
-            if (sales[i] > average){
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > average) {
                 monthsAboveAverage += 1;
             }
         }

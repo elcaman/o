@@ -7,7 +7,7 @@ import ru.netology.stats.StatsService.StatsService;
 
 public class StatsServiceTest {
     @Test
-    public void amountOfSales(){
+    public void amountOfSales() {
         StatsService service = new StatsService();
         long[] sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 180;
@@ -16,7 +16,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void averageSalesAmount(){
+    public void averageSalesAmount() {
         StatsService service = new StatsService();
         long[] sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 15;
@@ -25,7 +25,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void maxSales(){
+    public void maxSales() {
         StatsService service = new StatsService();
         long[] sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 8;
@@ -34,7 +34,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void minSales(){
+    public void minSales() {
         StatsService service = new StatsService();
         long[] sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 9;
@@ -43,7 +43,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void monthsLessAverage(){
+    public void monthsLessAverage() {
         StatsService service = new StatsService();
         long[] sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 5;
@@ -52,7 +52,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void monthsAboveAverage(){
+    public void monthsAboveAverage() {
         StatsService service = new StatsService();
         long[] sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 5;
